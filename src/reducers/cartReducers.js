@@ -5,7 +5,7 @@ const initialState = {
   itemList: {},
 };
 
-const cartReducers = (state = initialState, action) => {
+export const cartReducers = (state = initialState, action) => {
   switch (action.type) {
     case ADD_ITEM:
       return {
@@ -18,5 +18,3 @@ const cartReducers = (state = initialState, action) => {
       return state;
   }
 };
-
-export default cartReducers;

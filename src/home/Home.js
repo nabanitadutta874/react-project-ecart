@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { useSelector, useDispatch } from 'react-redux';
-import { addItem } from './../actions/CartActions';
+import { addItem } from '../actions/CartActions';
 
 function Home() {
   const state = useSelector((state) => state);
