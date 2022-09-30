@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { useSelector, useDispatch } from 'react-redux';
 
-function Home(props) {
+function Home() {
   const state = useSelector((state) => state);
   console.log('store', state);
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ function Home(props) {
       <Button
         variant="primary"
         onClick={() => {
-          dispatch(addItem('hi'));
+          dispatch(addItem());
         }}
       >
         Primary
