@@ -1,7 +1,7 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { configureStore } from './Store';
+import { store } from './Store';
 
 import App from './App';
 
@@ -9,7 +9,7 @@ const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
-  <Provider store={configureStore}>
+  <Provider store={store}>
     <App />
   </Provider>
 );
