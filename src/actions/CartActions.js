@@ -1,4 +1,4 @@
-import { ADD_ITEM } from './actionTypes/actionTypes';
+import { ADD_ITEM } from '../actionTypes/actionTypes';
 
 const addItem = () => {
   return {
