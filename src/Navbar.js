@@ -1,31 +1,24 @@
 import React from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
-import styled from 'styled-components';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Badge from 'react-bootstrap/Badge';
 
-const Styles = styled.div`
-  .navbar { background-color: #222; }
-  a, .navbar-nav, .navbar-light .nav-link {
-    color: #9FFFCB;
-    &:hover { color: white; }
-  }
-`;
-
-const navbar = () => {
+const NavbarComponent = (props) => {
   return (
-    <Styles>
-      <Navbar expand="lg">
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <Nav.Item>
-              <Nav.Link href="/">Home</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/cart">Cart</Nav.Link>
-            </Nav.Item>
-          </Nav>
-        </Navbar.Collapse>
+      <Navbar bg="primary" variant="dark">
+        <Container>
+          <Navbar.Collapse id="navbar-nav" >
+            <Nav className="justify-content-end flex-grow-1 ">
+              <Nav.Link href="/home">Home</Nav.Link>
+              <Nav.Link href="/carts">Carts
+              <Badge bg="danger" className="ms-1">{props.count}</Badge>
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
       </Navbar>
-    </Styles>
+    
   );
 };
-export default navbar;
+export default NavbarComponent;
