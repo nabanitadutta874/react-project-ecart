@@ -1,4 +1,4 @@
-import { ADD_ITEM} from "../actionTypes/actionTypes";
+import { ADD_ITEM } from './../actionTypes';
 
 const addItem = () => {
   return {
@@ -6,4 +6,4 @@ const addItem = () => {
   };
 };
 
-export { addItem};
+export { addItem };
